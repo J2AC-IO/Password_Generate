@@ -1,65 +1,64 @@
-# Gerador de Senha
+# Password Generator
 
-## 🚀 Começando
+## 🚀 Getting Started
 
-O software foi desenvolvido com o objetivo principal de aproveitar ao máximo a incrível biblioteca customTkinter. Com ela, é possível criar interfaces modernas e sofisticadas.
+The software was developed with the main goal of fully utilizing the amazing customTkinter library. With it, it's possible to create modern and sophisticated interfaces.
 
-- Atualmente, o programa permite gerar senhas de até 40 caracteres.
-- Você pode personalizar a senha de acordo com suas preferências, incluindo letras maiúsculas, letras minúsculas, caracteres especiais e números.
-- A funcionalidade de salvar senhas não está disponível, apenas a geração de novas senhas.
-- É possível copiar a senha gerada diretamente para a área de transferência.
+- Currently, the program allows you to generate passwords up to 40 characters long.
+- You can customize your password according to your preferences, including uppercase letters, lowercase letters, special characters, and numbers.
+- The functionality to save passwords is not available, only generating new passwords.
+- You can copy the generated password directly to the clipboard.
 
+![Software Image](generate-password.PNG)
 
-![Imagem do Software](generate-password.PNG)
-
-### 📋 Pré-requisitos
+### 📋 Prerequisites
 
 ```python
-# Se você usa windowns instale essa versão ou superior
+# If you are using Windows, install this version or higher
 $ choco install python --version=3.12.2
 
-# Se for linux
+# If you are on Linux
 sudo apt install python3.12 
 
-# Se for MAC 
+# If you are on MAC 
 brew install python
 
-# Clone esse repositório
+# Clone this repository
 $ git clone 
 
-# Acesse a pasta do projeto gerador-senha
+# Navigate to the password generator project folder
 $ cd gerador-senha
 
 pip 
-# Instale as dependências
+# Install dependencies
 $ pip install -r requirements.txt
 
-# Após instalar as dependências, execute o programa
+# After installing the dependencies, run the program
 $ python main.py
 
-#Obs: Alguns antivírus ficam reclamando, basta desativa-ló. 
+# Note: Some antivirus software might flag it, just disable it temporarily. 
 
-# Gere o executável 
-$ pyinstaller --onefile --windowed --name "GeradorSenha" --icon="passwordSec.ico" main.py
+# Generate the executable
+$ pyinstaller --onefile --windowed --name "PasswordGenerator" --icon="passwordSec.ico" main.py
 
-# Se falha, rode o comando para limpar a última build
-$ pyinstaller --clean --onefile --windowed --name "GeradorSenha" --icon=passwordSec.ico main.py
+# If it fails, run the command to clean the last build
+$ pyinstaller --clean --onefile --windowed --name "PasswordGenerator" --icon=passwordSec.ico main.py
 
-# Na pasta dist vai ter o seu .exe, basta executar.
+# In the dist folder, you'll find your .exe file, just run it.
 
 ```
 
 ![Badge](https://img.shields.io/badge/Version-1.0-%237159c1?style=for-the-badge&logo=ghost)
 
 
-### 📌 A versão 2.0 do software será lançada em breve, com mais recursos incríveis! No entanto, essa versão será paga:
+### 📌 The software version 2.0 will be released soon, with more amazing features! However, this version will be paid:
 
-- [x] Sistema de login seguro e prático
-- [x] Armazenamento de múltiplas senhas, para fácil acesso
-- [x] Geração de senhas com até 100 caracteres
-- [x] Design aprimorado, mais moderno e intuitivo
-- [x] Acesso vitalício, sem custos adicionais
-- [] E muito mais...
+- [x] Secure and practical login system
+- [x] Storage of multiple passwords for easy access
+- [x] Password generation up to 100 characters
+- [x] Enhanced design, more modern and intuitive
+- [x] Lifetime access, no additional costs
+- [] And much more...
 
 
 
