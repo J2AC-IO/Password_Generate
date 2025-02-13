@@ -39,10 +39,10 @@ $ python main.py
 # Note: Some antivirus software might flag it, just disable it temporarily. 
 
 # Generate the executable
-$ pyinstaller --onefile --windowed --name "PasswordGenerator" --icon="passwordSec.ico" main.py
+$ pyinstaller --onefile --windowed --name "PasswordGenerator" --icon="img/passwordSec.ico" main.py
 
 # If it fails, run the command to clean the last build
-$ pyinstaller --clean --onefile --windowed --name "PasswordGenerator" --icon=passwordSec.ico main.py
+$ pyinstaller --clean --onefile --windowed --name "PasswordGenerator" --icon=img/passwordSec.ico main.py
 
 # In the dist folder, you'll find your .exe file, just run it.
 
