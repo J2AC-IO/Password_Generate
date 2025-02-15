@@ -1,6 +1,6 @@
 import customtkinter as ctk
 from tkinter import messagebox
-from config import TYPOGRAPHY, FONT_SIZE_DEFAULT, FONT_SIZE_TITLE
+from config import TYPOGRAPHY, FONT_SIZE_DEFAULT, FONT_SIZE_TITLE, FONT_SIZE_BTN
 import logic
 
 
@@ -20,11 +20,8 @@ def copy_text():
 width_window = 500
 height_window = 650
 
-width_window = frame.winfo_screenwidth()
-height_window = frame.winfo_screenheight()
-
-pos_x = (width_window // 2) - (width_window // 2)
-pos_y = (height_window // 2) - (height_window // 2)
+pos_x = (frame.winfo_screenwidth() // 2) - (width_window // 2)
+pos_y = (frame.winfo_screenheight() // 2) - (height_window // 2)
 
 frame.geometry(f'{width_window}x{height_window}+{pos_x}+{pos_y}')
 frame.resizable(False, False)
@@ -38,18 +35,31 @@ frame_generated_password = ctk.CTkFrame(frame,
                                   )
 frame_generated_password.pack(pady=(20,0), padx=30, fill="both", expand=False)
 
-label_password_generate = ctk.CTkLabel(frame_generated_password, text="Senha Gerada ", font=(TYPOGRAPHY, FONT_SIZE_TITLE, "bold"), text_color="#EEF6FB")
+label_password_generate = ctk.CTkLabel(frame_generated_password, 
+                                       text="Senha Gerada ", 
+                                       font=(TYPOGRAPHY, FONT_SIZE_TITLE, "bold"), 
+                                       text_color="#EEF6FB")
 label_password_generate.pack(anchor="center", pady=(20, 15))
 
-password_generate = ctk.CTkTextbox(frame_generated_password, height=50, state="disabled", fg_color="#262C3E", font=(TYPOGRAPHY, FONT_SIZE_DEFAULT, "bold"))
+password_generate = ctk.CTkTextbox(frame_generated_password, 
+                                   height=50, 
+                                   state="disabled", 
+                                   fg_color="#1A263A",  # #141F30
+                                   font=(TYPOGRAPHY, FONT_SIZE_DEFAULT, "bold"))
 password_generate.pack(fill="both", padx=24)
 
-button = ctk.CTkButton(frame_generated_password, fg_color="#FFA500", hover_color="#FFA500", command=copy_text, text="copiar", font=(TYPOGRAPHY, FONT_SIZE_DEFAULT, "bold"), width=50, height=20)
-button.pack(pady=(10, 20),anchor="e" , padx=(0, 30))
+button = ctk.CTkButton(frame_generated_password, 
+                       fg_color="#8E80F5", 
+                       hover_color="#FFA500", 
+                       command=copy_text, 
+                       text="Copiar", 
+                       font=(TYPOGRAPHY, FONT_SIZE_DEFAULT, "bold"), 
+                       width=55, height=28)
+button.pack(pady=(10, 20),anchor="e" , padx=(0, 25))
 
 frame_options = ctk.CTkFrame(frame, 
                             fg_color="#0D1826",
-                            border_width=0,
+                            border_width=0,     
                             corner_radius=25
                             )
 frame_options.pack(pady=(20,0), padx=30, fill="both", expand=False)
@@ -119,7 +129,14 @@ def processes_data():
 
     logic.message_config(option_menu.get(), chk_uppercase.get(), chk_lowercase.get(), chk_number.get(), chk_special_char.get(), flash_message, frame, password_generate) 
 
-button = ctk.CTkButton(frame_options, fg_color="#7764F3", hover_color="#7764F3", text="Gerar", command=processes_data, font=(TYPOGRAPHY, FONT_SIZE_DEFAULT, "bold"), width=100, height=35)
+button = ctk.CTkButton(frame_options, 
+                       fg_color="#7764F3", 
+                       hover_color="#7764F3", 
+                       text="Gerar", 
+                       command=processes_data, 
+                       font=(TYPOGRAPHY, FONT_SIZE_BTN, "bold"), 
+                       width=110, 
+                       height=35)
 button.pack(pady=(5,15))
 
 flash_message = ctk.CTkLabel(frame, text="", font=(TYPOGRAPHY, FONT_SIZE_DEFAULT, "bold"))
