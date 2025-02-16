@@ -9,7 +9,7 @@ The software was developed with the main goal of fully utilizing the amazing cus
 - The functionality to save passwords is not available, only generating new passwords.
 - You can copy the generated password directly to the clipboard.
 
-![Software Image](img/generate-password.PNG)
+![Software Image](img/generate-password-v2.PNG)
 
 ### 📋 Prerequisites
 
